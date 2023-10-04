@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Norse-Bold';
+    src: url('./fonts/Norse-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #F8FAFA;
+    margin: 0;
+    display: flex;
+}
+
+.credit {
+    font-family: roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+
+.sidebar a {
+    color: white;
+}
+
+.sidebar {
+    display: flex;
+    color: #e6ebe7;
+    flex-direction: column;
+    height: 100vh;
+    width: clamp(250px, 55vw, 1100px);
+    flex: 0 1 auto;
+    background-image: url("./images/plant.jpg");
+    background-size: 800px 1199px;
+    background-position: 50% 50%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#odin-logo {
+    height: 120px;
+    object-fit: contain;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20vh 0;
+    gap: 10px;
+    width: 100%;
+    height: 10rem;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.title {
+    font-family: 'Norse-Bold', sans-serif;
+    font-size: 84px;
+}
+
+.credit {
+    padding: 10px 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: roboto;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.main .content {
+    padding: 0 10vw 0 3vw;
+}
+
+.heading {
+    font-size: 24px;
+}
+
+.form-container {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    color: #242F3B;
+    padding: 20px 0;
+    margin: 70px 0 20px 0;
+    box-shadow: 2px 3px 5px #dad3d3;
+    gap: 30px;
+}
+
+.section-container {
+    padding-left: 3vw;
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+}
+
+.section-container input {
+    height: 25px;
+    border-radius: 4px;
+    border: 1px solid #E5E7EB;
+    margin-bottom: 25px;
+}
+
+.label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding-bottom: 2px;
+}
+
+.inputs {
+    display: flex;
+    flex-flow: row wrap;
+    width: min(59vw, 880px);
+}
+
+#create-account {
+    width: 220px;
+    margin: 1vw 3vw;
+    height: 50px;
+    background-color: #596D48;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-family: roboto, system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    box-shadow: 2px 3px 5px #dad3d3;
+}
+
+button+text {
+    margin: 1vw 3vw;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.main a {
+    color: #596D48;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100vw;
+        height:auto;
+        background-size:  100%;
+    }
+    .title-container {
+        margin:0;
+    }
+
+    .inputs {
+        width: min(80vw, 880px);
+    }
+}
