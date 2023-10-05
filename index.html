@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap&family=Roboto:wght@400&display=swap"
+        rel="stylesheet">
     <title>Sign-up Form</title>
 </head>
 
@@ -32,37 +34,46 @@
         </text>
         <div class="form-container">
             <text class="heading content">Let's do this!</text>
-            <form action="./data.html" method="post" onsubmit="event.preventDefault();">
+            <form action="#" method = "post" id="account-form">
                 <div class="inputs">
                     <div class="section-container">
-                        <label for="first_name" class="label">FIRST NAME</label>
-                        <input type="text" id="first_name">
+                        <label for="first-name" class="label">FIRST NAME</label>
+                        <input type="text" class="name" id="first-name" required>
+                        <span class=error id="first-name-error"></span>
                     </div>
                     <div class="section-container">
-                        <label for="last_name" class="label">LAST NAME</label>
-                        <input type="text" id="last_name">
+                        <label for="last-name" class="label">LAST NAME</label>
+                        <input type="text" class="name" id="last-name">
+                        <span class=error id="last-name-error"></span>
                     </div>
                     <div class="section-container">
                         <label for="email" class="label">EMAIL</label>
-                        <input type="email" id="email">
+                        <input type="email" id="email" required>
+                        <span class=error id="email-error"></span>
                     </div>
                     <div class="section-container">
                         <label for="number" class="label">PHONE NUMBER</label>
-                        <input type="number" id="number">
+                        <input type="text" id="number">
+                        <span class=error id="number-error"></span>
                     </div>
                     <div class="section-container">
                         <label for="password" class="label">PASSWORD</label>
-                        <input type="password" id="password">
+                        <input type="password" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                        <span class=error id="upper-password-error"></span>
+                        <span class=error id="lower-password-error"></span>
+                        <span class=error id="number-password-error"></span>
+                        <span class=error id="length-password-error"></span>
                     </div>
                     <div class="section-container">
-                        <label for="confirm_password" class="label">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm_password">
+                        <label for="confirm-password" class="label">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm-password" required>
+                        <span class=error id="confirm-password-error"></span>
                     </div>
                 </div>
             </form>
         </div>
-        <button type="submit" id = "create-account">Create Account</button>
-        <text>Already have an account? <a href = "https://www.google.com">Log in</a></text>
+        <button type="submit" form="account-form" id="create-account" value="submit">Create Account</button>
+        <text>Already have an account? <a href="https://www.google.com">Log in</a></text>
     </div>
 </body>
 
